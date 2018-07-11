@@ -12,7 +12,10 @@ class App extends Component {
       <div class = "card transparent z-depth-5">
     
       </div>
+      
       <Button waves='light'>Login<Icon left>cloud</Icon></Button>
+
+      <h1 style='center'> </h1>
       </div>
 
       <div>
@@ -25,7 +28,7 @@ class App extends Component {
       ]} />
     </div>
     <Button waves='light'>Connect with me!<Icon left>call made</Icon></Button>
-      </div>
+    </div>
       
      
       
