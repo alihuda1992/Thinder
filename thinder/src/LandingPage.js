@@ -20,6 +20,7 @@ class LandingPage extends Component {
                 <Modal
                   header='Enter your Username and Password'
                   trigger={<Button>Login</Button>}>
+                  
                  
                 </Modal>  
 
