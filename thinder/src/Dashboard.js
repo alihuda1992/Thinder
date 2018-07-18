@@ -3,6 +3,8 @@ import logo from './logo.svg';
 import './dashboard.css';
 import {SideNav,SideNavItem,Col,CardTitle,Card,Parallax,Carousel,Button, Icon} from 'react-materialize'
 import images from './images.json'
+import { BrowserRouter, Route, Link } from 'react-router-dom'
+
 
 class Dashboard extends Component {
   render() {
@@ -17,15 +19,13 @@ class Dashboard extends Component {
   >
   <SideNavItem userView
     user={{
-      background: './images/sidenavback.jpeg',
-      image: 'img/yuna.jpg',
-      name: 'John Doe',
-      email: 'jdandturk@gmail.com'
+      background: require('./images/sidenavback.jpg'),
+      image: require('./images/me.jpg'),
+      name: 'Ali Huda',
+      email: 'alihuda1992@gmail.com'
     }}
   />
-  <SideNavItem divider />
-  <SideNavItem subheader>Subheader</SideNavItem>
-  <SideNavItem waves href=''>Logout</SideNavItem>
+  <Button><Link to='/'>Logout</Link></Button>
 </SideNav>
 
 <h2>Available Trainers</h2>
