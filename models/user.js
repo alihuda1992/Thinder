@@ -3,7 +3,11 @@ module.exports = function(sequelize, DataTypes) {
     // Giving the User model a name of type STRING
     username: DataTypes.STRING, 
     password: DataTypes.STRING
-  });
+  },
+  {
+    timestamps: false
+  }
+);
 
   return User;
 };
