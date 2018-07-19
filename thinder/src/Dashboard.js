@@ -19,10 +19,10 @@ class Dashboard extends Component {
   >
   <SideNavItem userView
     user={{
-      background: require('./images/sidenavback.jpg'),
-      image: require('./images/me.jpg'),
-      name: 'Ali Huda',
-      email: 'alihuda1992@gmail.com'
+      background: './images/sidenavback.jpeg',
+      image: 'img/yuna.jpg',
+      name: 'John Doe',
+      email: 'jdandturk@gmail.com'
     }}
   />
   <Button><Link to='/'>Logout</Link></Button>
