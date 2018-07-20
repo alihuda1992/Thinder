@@ -12,14 +12,15 @@ class LandingPage extends Component {
       <div className="landingpage">
 
         <div>
-            <Parallax imageSrc= {require('./images/background.jpg')}/>
+            <Parallax imageSrc= {require('./images/background3.jpg')}/>
             <div className="header">
                 <div className="row container">
                 <h2 className="header">Thinder</h2>
                 {/* <Button id="login" waves='light'>Login<Icon left>cloud</Icon></Button> */}
 
 
-              <Modal
+
+   <Modal
   header='Get Started Here'
   trigger={<Button>Login</Button>}>
   <p><Row>
