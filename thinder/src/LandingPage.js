@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import {Modal,Parallax,Carousel,Button, Icon} from 'react-materialize'
+import {Row,Input,Modal,Parallax,Carousel,Button, Icon} from 'react-materialize'
 import Dashboard from './Dashboard';
+import { BrowserRouter, Route, Link } from 'react-router-dom'
+
 
 class LandingPage extends Component {
   render() {
@@ -18,9 +20,15 @@ class LandingPage extends Component {
 
 
               <Modal
-  header='Modal Header'
+  header='Get Started Here'
   trigger={<Button>Login</Button>}>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+  <p><Row>
+    <Input placeholder="Username" s={6} label="" />
+    <Input s={6} label="Password" />
+    <Button><Link to='/dashboard'>Login</Link></Button>    {/* <Input s={12} label="disabled" defaultValue="I am not editable" disabled /> */}
+    {/* <Input type="password" label="password" s={12} /> */}
+    {/* <Input type="email" label="Email" s={12} /> */}
+</Row></p>
 </Modal>
 
               
