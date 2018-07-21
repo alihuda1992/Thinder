@@ -12,10 +12,11 @@
   },
   "devDependencies": {},
   "scripts": {
+    "server": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
     "build": "node scripts/build.js",
-    "heroku-postbuild": "cd thinder && npm install && npm build"
+    "heroku-postbuild": "cd thinder && yarn install && yarn build"
   },
   "repository": {
     "type": "git",
