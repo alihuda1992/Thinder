@@ -1,5 +1,5 @@
 {
-  "name": "Thinder",
+  "name": "thinder",
   "version": "1.0.0",
   "description": "An application that connects health enthusiasts with personal trainers in real time.",
   "main": "server.js",

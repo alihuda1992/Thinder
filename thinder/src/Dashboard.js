@@ -5,6 +5,24 @@ import {SideNav,SideNavItem,Col,CardTitle,Card,Parallax,Carousel,Button, Icon} f
 import images from './images.json'
 import { BrowserRouter, Route, Link } from 'react-router-dom'
 
+var ReactDOM = require('react-dom');
+var YoutubeLive = require('youtube-live-react');
+
+var App = React.createClass({
+	render () {
+		return (
+			<div>
+			<YoutubeLive
+				iframeWidth={400}
+				iframeHeight={300}
+				maxResults={50}
+				youtubeChannelId='{YOUTUBE_CHANNEL_ID}'
+				googleApiKey='{YOUR_GOOGLE_API_KEY}'/>
+			</div>
+		);
+	}
+});
+ReactDOM.render(<App />, document.getElementById('app'));
 
 class Dashboard extends Component {
   render() {
@@ -32,7 +50,11 @@ class Dashboard extends Component {
 
 
   <Col m={7} s={12}>
-  <Card horizontal header={<CardTitle image={require('./images/trainer6.jpeg')}></CardTitle>} actions={[<a href='#'>This is a link</a>]}>
+  <Card horizontal header={<CardTitle image={require('./images/trainer6.jpeg')}></CardTitle>} 
+  actions={[<a href='#'>This is a link</a>]}>
+
+
+
       <p>I am a very simple card. I am good at containing small bits of information</p>
     </Card>
 </Col>
@@ -77,27 +99,3 @@ class Dashboard extends Component {
 }
 
 export default Dashboard;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
