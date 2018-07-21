@@ -15,8 +15,7 @@
     "server": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
-    "build": "node scripts/build.js",
-    "heroku-postbuild": "cd thinder && yarn install && yarn build"
+    "build": "node scripts/build.js"
   },
   "repository": {
     "type": "git",
