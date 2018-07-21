@@ -29,24 +29,20 @@ app.use(express.static(path.join((__dirname, "thinder/build"))));
 // Routes
 // =============================================================
 // require("./routes/api.js")(app);
+app.get('/', (req, res)=>{
+    res.sendFile(path.join(__dirname, "./thinder/build/index.html"))
+})
 
-// app.get('/api/login', (req, res)=>{
-
-//     db.User.findAll().then(function(dbAuthor) {
-//         console.log("***",dbAuthor)
-//         res.json(dbAuthor);
-//     });
-// })
 // require("./routes/author-api-routes.js")(app);
 require("./routes/api")(app);
 
 // Syncing our sequelize models and then starting our Express app
 // =============================================================
 //     console.log('hello')
-db.sequelize.sync({ force: false }).then(() => {
-    app.listen(PORT, function() {
-        console.log('here we go')
-        console.log("App listening on PORT " + PORT);
-  })
+// db.sequelize.sync({ force: false }).then(() => {
+//     app.listen(PORT, function() {
+//         console.log('here we go')
+//         console.log("App listening on PORT " + PORT);
+//   })
 //   .catch(err=>console.log(err))
 });
