@@ -29,16 +29,14 @@ app.use(express.static(path.join((__dirname, "thinder/build"))));
 // Routes
 // =============================================================
 // require("./routes/api.js")(app);
-app.get('/', (req, res)=>{
-    console.log('yo yo')
-})
-app.get('/api/login', (req, res)=>{
 
-    db.User.findAll().then(function(dbAuthor) {
-        console.log("***",dbAuthor)
-        res.json(dbAuthor);
-    });
-})
+// app.get('/api/login', (req, res)=>{
+
+//     db.User.findAll().then(function(dbAuthor) {
+//         console.log("***",dbAuthor)
+//         res.json(dbAuthor);
+//     });
+// })
 // require("./routes/author-api-routes.js")(app);
 require("./routes/api")(app);
 
