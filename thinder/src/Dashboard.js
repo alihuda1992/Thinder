@@ -8,7 +8,7 @@ import { BrowserRouter, Route, Link } from 'react-router-dom'
 var ReactDOM = require('react-dom');
 var YoutubeLive = require('youtube-live-react');
 
-var App = React.createClass({
+class YoutubeContainer extends Component{
 	render () {
 		return (
 			<div>
@@ -16,19 +16,18 @@ var App = React.createClass({
 				iframeWidth={400}
 				iframeHeight={300}
 				maxResults={50}
-				youtubeChannelId='{YOUTUBE_CHANNEL_ID}'
-				googleApiKey='{YOUR_GOOGLE_API_KEY}'/>
+				youtubeChannelId='UC0pRbxU4TdSUhQlvHLU2Dug'
+				googleApiKey='AIzaSyBhwpbzgFX2qRQu29HBFYFMs5bROwMNx1I'/>
 			</div>
 		);
 	}
-});
-ReactDOM.render(<App />, document.getElementById('app'));
+};
 
 class Dashboard extends Component {
   render() {
     return (
       <div className="dashboard">
-
+<YoutubeContainer/>
 <div class="container">
 
 <SideNav 

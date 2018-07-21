@@ -6,7 +6,10 @@
 // =============================================================
 var express = require("express");
 var bodyParser = require("body-parser");
-const path = require('path');
+var path = require('path');
+var ReactDOM = require('react-dom');
+var YoutubeLive = require('youtube-live-react');
+
 
 // Sets up the Express App
 // =============================================================
