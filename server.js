@@ -40,7 +40,7 @@ app.get('/api/login', (req, res)=>{
     });
 })
 // require("./routes/author-api-routes.js")(app);
-// require("./routes/post-api-routes.js")(app);
+require("./routes/api")(app);
 
 // Syncing our sequelize models and then starting our Express app
 // =============================================================

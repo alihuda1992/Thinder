@@ -4,9 +4,33 @@ import './App.css';
 import {Row,Input,Modal,Parallax,Carousel,Button, Icon} from 'react-materialize'
 import Dashboard from './Dashboard';
 import { BrowserRouter, Route, Link } from 'react-router-dom'
+import API from './utils/API'
 
 
 class LandingPage extends Component {
+  constructor(props){
+    super(props)
+    this.state = {
+      username: '',
+      password: ''
+    }
+  }
+
+  handleInputChange = event => {
+    const name = event.target.name;
+    const value = event.target.value;
+    this.setState({
+      [name]: value
+    });
+  };
+
+  login = () => {
+    console.log('called')
+    API.userAuth(this.state)
+    .then(res => {
+      console.log(res)
+    })
+  }
   render() {
     return (
       <div className="landingpage">
@@ -24,12 +48,22 @@ class LandingPage extends Component {
   header='Get Started Here'
   trigger={<Button>Login</Button>}>
   <p><Row>
-    <Input placeholder="Username" s={6} label="" />
-    <Input s={6} label="Password" />
-    <Button><Link to='/dashboard'>Login</Link></Button>   
-    {/* <Input s={12} label="disabled" defaultValue="I am not editable" disabled /> */}
-    {/* <Input type="password" label="password" s={12} /> */}
-    {/* <Input type="email" label="Email" s={12} /> */}
+    <Input 
+    placeholder="Username" s={6} 
+    label="Username"
+    onChange={this.handleInputChange}
+    value={this.username}
+    name="username" />
+
+    <Input 
+    placeholder= "Password"s={6} 
+    label="Password"
+    onChange={this.handleInputChange}
+    value={this.password}
+    name="password" />
+
+    <Button onClick={this.login}>Submit</Button>   
+    
 </Row></p>
 </Modal>
 
