@@ -86,13 +86,13 @@ class Dashboard extends Component {
  actions={[
    <Modal
    header='Enjoy your workout!'
-   trigger={<Button>Connect With Marissa!</Button>}>
+   trigger={<Button>Connect With Suzy!</Button>}>
    <p><Row>
    <Livestream/>
  </Row></p>
  </Modal>
  ]}>
-     <p>My name is Marissa!</p>
+     <p>My name is Suzy and Gucci think I love him!</p>
    </Card>
 </Col>
 
@@ -102,13 +102,13 @@ class Dashboard extends Component {
  actions={[
    <Modal
    header='Enjoy your workout!'
-   trigger={<Button>Connect With Marissa!</Button>}>
+   trigger={<Button>Roll up the partition with Meroncay!</Button>}>
    <p><Row>
    <Livestream/>
  </Row></p>
  </Modal>
  ]}>
-     <p>My name is Marissa!</p>
+     <p>Quen Meroncay at your service. Ready to serve looks and take names.</p>
    </Card>
 </Col>
 

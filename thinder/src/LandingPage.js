@@ -4,7 +4,8 @@ import './App.css';
 import {Row,Input,Modal,Parallax,Carousel,Button, Icon} from 'react-materialize'
 import Dashboard from './Dashboard';
 import { BrowserRouter, Route, Link } from 'react-router-dom'
-import API from './utils/API'
+import API from './utils/API';
+import $ from 'jquery';
 
 
 class LandingPage extends Component {
@@ -30,7 +31,9 @@ class LandingPage extends Component {
       console.log(res)
       if (res.data === 'authorized') {
         this.props.history.push('/dashboard')
+        this.setState({unauthorized: false})
       } else {
+        this.setState({unauthorized: true})
       }
 
 
@@ -39,41 +42,30 @@ class LandingPage extends Component {
   render() {
     return (
       <div className="landingpage">
-
         <div>
-            <Parallax imageSrc= {require('./images/background3.jpg')}/>
-            <div className="header">
-                <div className="row container">
-                <h2 className="header">Thinder</h2>
-                {/* <Button id="login" waves='light'>Login<Icon left>cloud</Icon></Button> */}
+          <Parallax imageSrc= {require('./images/background3.jpg')}/>
+          <div className="header">
+              <div className="row container">
+              <h2 className="header">Thinder</h2>
+              {this.state.unauthorized ? <h2 style={{color: 'red'}}>Sorry, Try Again</h2> : null}
+              <Input 
+              placeholder="Username" s={6} 
+              onChange={this.handleInputChange}
+              value={this.username}
+              style={{ borderBottomColor: this.state.unauthorized ? 'red' : 'darkgray'}}
+              name="username" />
 
+              <Input 
+              placeholder= "Password"s={6} 
+              onChange={this.handleInputChange}
+              value={this.password}
+              style={{ borderBottomColor: this.state.unauthorized ? 'red' : 'darkgray'}}
+              name="password" />
 
-
-  
-    <Input 
-    placeholder="Username" s={6} 
-    onChange={this.handleInputChange}
-    value={this.username}
-    name="username" />
-
-    <Input 
-    placeholder= "Password"s={6} 
-    onChange={this.handleInputChange}
-    value={this.password}
-    name="password" />
-
-    <Button onClick={this.login}>Submit</Button>   
-    
-
-
-              
-
-
-
-                </div>
+              <Button onClick={this.login}>Submit</Button>   
             </div>
+          </div>
         </div>
-     
     </div>
 
     );
