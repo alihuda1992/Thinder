@@ -30,7 +30,7 @@ app.use(express.static(path.join(__dirname, "thinder/build")));
 // =============================================================
 // require("./routes/api.js")(app);
 app.get('/', (req, res)=>{
-    res.sendFile(path.join(__dirname, "./thinder/build/index.html"))
+    res.sendFile(path.join(__dirname, "../thinder/build/index.html"))
 })
 
 // require("./routes/author-api-routes.js")(app);
