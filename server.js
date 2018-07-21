@@ -5,7 +5,7 @@
 // *** Dependencies
 // =============================================================
 var express = require("express");
-var router = express.Router();
+var routes = require('./routes')
 var bodyParser = require("body-parser");
 const path = require('path');
 
@@ -30,12 +30,10 @@ app.use(express.static(path.join(__dirname, "thinder/build")));
 // Routes
 // =============================================================
 // require("./routes/api.js")(app);
-router.use((req, res)=>{
-    res.sendFile(path.join(__dirname, "../thinder/build/index.html"))
-})
+app.use(routes)
 
 // require("./routes/author-api-routes.js")(app);
-require("./routes/api")(app);
+// require("./routes/api")(app);
 
 // Syncing our sequelize models and then starting our Express app
 // =============================================================
