@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './dashboard.css';
-import {SideNav,SideNavItem,Col,CardTitle,Card,Parallax,Carousel,Button, Icon} from 'react-materialize'
+import {Modal,Row,SideNav,SideNavItem,Col,CardTitle,Card,Parallax,Carousel,Button, Icon} from 'react-materialize'
 import images from './images.json'
 import { BrowserRouter, Route, Link } from 'react-router-dom'
+import Livestream from './LiveStream';
 
 
 class Dashboard extends Component {
@@ -61,11 +62,25 @@ class Dashboard extends Component {
     </Card>
 </Col>
 
- <Col m={7} s={12}>
-  <Card horizontal header={<CardTitle image={require('./images/trainer8.jpeg')}></CardTitle>} actions={[<a href='#'>This is a link</a>]}>
-      <p>I am a very simple card. I am good at containing small bits of information</p>
-    </Card>
+
+<Col m={7} s={12}>
+ <Card horizontal header={<CardTitle image={require('./images/trainer8.jpeg')}></CardTitle>}
+ actions={[
+   <Modal
+   header='Enjoy your workout!'
+   trigger={<Button>Connect With Marissa!</Button>}>
+   <p><Row>
+   <Livestream/>
+ </Row></p>
+ </Modal>
+ ]}>
+     <p>My name is Marissa!</p>
+   </Card>
 </Col>
+
+
+
+
 
 </div>
      

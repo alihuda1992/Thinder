@@ -4,13 +4,16 @@
   "private": true,
   "dependencies": {
     "create-react-app": "^1.5.2",
+    "create-react-class": "^15.6.3",
+    "gapi": "0.0.3",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "react-materialize": "^2.3.3",
     "react-parallax": "^1.8.0",
     "react-router-dom": "^4.3.1",
     "react-scripts": "1.1.4",
-    "react-scroll-parallax": "^1.3.5"
+    "react-scroll-parallax": "^1.3.5",
+    "youtube-live-react": "^1.0.0"
   },
   "scripts": {
     "start": "react-scripts start",

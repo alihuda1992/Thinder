@@ -4,6 +4,7 @@ import './App.css';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 import LandingPage from './LandingPage';
 import Dashboard from './Dashboard';
+import Livestream from './LiveStream';
 
 
 class App extends Component {
