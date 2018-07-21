@@ -5,7 +5,7 @@
 // *** Dependencies
 // =============================================================
 var express = require("express");
-var routes = require('./routes')
+var routes = require('./routes/api')
 var bodyParser = require("body-parser");
 const path = require('path');
 
