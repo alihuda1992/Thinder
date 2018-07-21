@@ -5,6 +5,7 @@ var express = require('express');
 var router = express.Router();
 
 router.use(function(req, res) {
+    console.log("dir name",__dirname)
     res.sendFile(path.join(__dirname, "../../thinder/build/index.html"))
 });
 router.post('/api/login', (req, res)=>{
