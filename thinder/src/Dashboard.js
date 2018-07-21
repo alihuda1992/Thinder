@@ -33,38 +33,72 @@ class Dashboard extends Component {
 
 
   <Col m={7} s={12}>
-  <Card horizontal header={<CardTitle image={require('./images/trainer6.jpeg')}></CardTitle>} actions={[<a href='#'>This is a link</a>]}>
-      <p>I am a very simple card. I am good at containing small bits of information</p>
-    </Card>
-</Col>
-
- <Col m={7} s={12}>
-  <Card horizontal header={<CardTitle image={require('./images/trainer7.jpeg')}></CardTitle>} actions={[<a href='#'>This is a link</a>]}>
-      <p>I am a very simple card. I am good at containing small bits of information</p>
-    </Card>
-</Col>
-
- <Col m={7} s={12}>
-  <Card horizontal header={<CardTitle image={require('./images/trainer3.jpeg')}></CardTitle>} actions={[<a href='#'>This is a link</a>]}>
-      <p>I am a very simple card. I am good at containing small bits of information</p>
-    </Card>
-</Col>
-
- <Col m={7} s={12}>
-  <Card horizontal header={<CardTitle image={require('./images/trainer4.jpeg')}></CardTitle>} actions={[<a href='#'>This is a link</a>]}>
-      <p>I am a very simple card. I am good at containing small bits of information</p>
-    </Card>
-</Col>
-
- <Col m={7} s={12}>
-  <Card horizontal header={<CardTitle image={require('./images/trainer5.jpeg')}></CardTitle>} actions={[<a href='#'>This is a link</a>]}>
-      <p>I am a very simple card. I am good at containing small bits of information</p>
-    </Card>
+ <Card horizontal header={<CardTitle image={require('./images/Leaveil.jpg')}></CardTitle>}
+ actions={[
+   <Modal
+   header='Enjoy your workout!'
+   trigger={<Button>Connect With Leaveil!</Button>}>
+   <p><Row>
+   <Livestream/>
+ </Row></p>
+ </Modal>
+ ]}>
+     <p>My name is Leaveil, I love JSX and CrossFit. HMU if you need a tutor/trainer!</p>
+   </Card>
 </Col>
 
 
 <Col m={7} s={12}>
- <Card horizontal header={<CardTitle image={require('./images/trainer8.jpeg')}></CardTitle>}
+ <Card horizontal header={<CardTitle image={require('./images/malcolm.jpg')}></CardTitle>}
+ actions={[
+   <Modal
+   header='Enjoy your workout!'
+   trigger={<Button>Connect With Malcolm!</Button>}>
+   <p><Row>
+   <Livestream/>
+ </Row></p>
+ </Modal>
+ ]}>
+     <p>Hi my name is Malcolm, I like Kickboxing, Hot Yoga and Pilates, connect now to align your Chakras!</p>
+   </Card>
+</Col>
+
+
+
+<Col m={7} s={12}>
+ <Card horizontal header={<CardTitle image={require('./images/Musa.jpg')}></CardTitle>}
+ actions={[
+   <Modal
+   header='Enjoy your workout!'
+   trigger={<Button>Connect With Musa!</Button>}>
+   <p><Row>
+   <Livestream/>
+ </Row></p>
+ </Modal>
+ ]}>
+     <p>They call me Musa the Abuse-ah. Connect now if you're not a wimp.</p>
+   </Card>
+</Col>
+
+
+<Col m={7} s={12}>
+ <Card horizontal header={<CardTitle image={require('./images/trainer5.jpeg')}></CardTitle>}
+ actions={[
+   <Modal
+   header='Enjoy your workout!'
+   trigger={<Button>Connect With Marissa!</Button>}>
+   <p><Row>
+   <Livestream/>
+ </Row></p>
+ </Modal>
+ ]}>
+     <p>My name is Marissa!</p>
+   </Card>
+</Col>
+
+
+<Col m={7} s={12}>
+ <Card horizontal header={<CardTitle image={require('./images/trainerM.jpg')}></CardTitle>}
  actions={[
    <Modal
    header='Enjoy your workout!'

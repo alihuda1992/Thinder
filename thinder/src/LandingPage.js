@@ -25,10 +25,15 @@ class LandingPage extends Component {
   };
 
   login = () => {
-    console.log('called')
     API.userAuth(this.state)
     .then(res => {
       console.log(res)
+      if (res.data === 'authorized') {
+        this.props.history.push('/dashboard')
+      } else {
+      }
+
+
     })
   }
   render() {
@@ -44,28 +49,22 @@ class LandingPage extends Component {
 
 
 
-   <Modal
-  header='Get Started Here'
-  trigger={<Button>Login</Button>}>
-  <p><Row>
+  
     <Input 
     placeholder="Username" s={6} 
-    label="Username"
     onChange={this.handleInputChange}
     value={this.username}
     name="username" />
 
     <Input 
     placeholder= "Password"s={6} 
-    label="Password"
     onChange={this.handleInputChange}
     value={this.password}
     name="password" />
 
     <Button onClick={this.login}>Submit</Button>   
     
-</Row></p>
-</Modal>
+
 
               
 
