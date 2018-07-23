@@ -59,6 +59,7 @@ class LandingPage extends Component {
               placeholder= "Password"s={6} 
               onChange={this.handleInputChange}
               value={this.password}
+              type="password"
               style={{ borderBottomColor: this.state.unauthorized ? 'red' : 'darkgray'}}
               name="password" />
 

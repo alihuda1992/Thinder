@@ -4,10 +4,6 @@ var sequelize = require('sequelize');
 var express = require('express');
 var router = express.Router();
 
-router.use(function(req, res) {
-    console.log("dir name",__dirname)
-    res.sendFile(express.static(path.join(__dirname, "../thinder/build/index.html")))
-});
 router.post('/api/login', (req, res)=>{
     // sequelize.query("USE Authentication; SELECT * FROM `users` where username  in (?) and password in (?) ;", [req.body.username, req.body.password], { type: sequelize.QueryTypes.SELECT})
     db.User.findAll({
@@ -22,6 +18,10 @@ router.post('/api/login', (req, res)=>{
             res.send("unauthroized")
             else res.send("authorized")
     })
+});
+router.use(function(req, res) {
+    console.log("dir name",__dirname)
+    res.sendFile(path.join(__dirname, "../thinder/build/index.html"))
 });
 
 module.exports = router;

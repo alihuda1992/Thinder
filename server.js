@@ -16,7 +16,7 @@ var PORT = process.env.PORT || 8080;
 
 // Requiring our models for syncing
 var db = require("./models");
-console.log("user ",db.User)
+// console.log("user ",db.User)
 // Sets up the Express app to handle data parsing
 
 // parse application/x-www-form-urlencoded
